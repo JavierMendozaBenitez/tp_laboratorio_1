@@ -22,8 +22,8 @@ int main()
     int flag3;
     int contadorOperando1;
     int contadorOperando2;
-    float resolucionDivision;
     int dividiendo;
+    float resolucionDivision;
 
     flag1 = 0;
     flag2 = 0;

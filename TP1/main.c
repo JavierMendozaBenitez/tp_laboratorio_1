@@ -100,38 +100,38 @@ int main()
             case 4:
                 if(flag3 == 1)
                 {
-                    printf("\nEl resultado de A+B es: %.2f\n", sumando);
-                    printf("\nEl resultado de A-B es: %.2f\n", restando);
+                    printf("\nEl resultado de %.2f + %.2f es: %.2f\n", ingreso1, ingreso2, sumando);
+                    printf("\nEl resultado de %.2f - %.2f es: %.2f\n", ingreso1, ingreso2, restando);
 
                     if(dividiendo == 0)
                     {
-                        printf("\nEl resultado de A/B es: %.2f\n", resolucionDivision);
+                        printf("\nEl resultado de %.2f / %.2f es: %.2f\n", ingreso1, ingreso2, resolucionDivision);
                     }
                     else
                     {
                         printf("\nNo es posible dividir por cero.\n");
                     }
 
-                    printf("\nEl resultado de A*B es: %.2f\n", multiplicando);
+                    printf("\nEl resultado de %.2f * %.2f es: %.2f\n", ingreso1, ingreso2, multiplicando);
 
                     if(factorizando == 0)
                     {
-                        printf("\nEl factorial de A es: %.2f\n", resolucionFactorial);
+                        printf("\nEl factorial de %.2f es: %.2f\n", ingreso1, resolucionFactorial);
                     }
                     else
                     {
-                        printf("\nEl numero A no se puede factorizar, debe ingresar un numero mayor a 0.\n");
+                        printf("\nEl numero %.2f no se puede factorizar, debe ingresar un numero mayor a 0 y sin decimales.\n", ingreso1);
                     }
 
                     factorizando2 = factorial(&resolucionFactorial2, ingreso2);
 
                     if(factorizando2 == 0)
                     {
-                        printf("El factorial de B es: %.2f\n\n", resolucionFactorial2);
+                        printf("El factorial de %.2f es: %.2f\n\n", ingreso2, resolucionFactorial2);
                     }
                     else
                     {
-                        printf("El numero B no se puede factorizar, debe ingresar un numero mayor a 0.\n\n");
+                        printf("El numero %.2f no se puede factorizar, debe ingresar un numero mayor a 0 y sin decimales.\n\n", ingreso2);
                     }
 
                     contadorOperando1 = 0;

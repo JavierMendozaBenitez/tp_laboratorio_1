@@ -6,24 +6,25 @@ int main()
 {
     int opcion;
     int respuesta;
-    int ingreso1;
-    int ingreso2;
-    int sumando;
-    int restando;
-    int multiplicando;
     int factorizando;
-    int resolucionSuma;
-    int resolucionResta;
-    int resolucionMultiplicacion;
-    int resolucionFactorial;
-    int resolucionFactorial2;
+    int factorizando2;
     int flag1;
     int flag2;
     int flag3;
     int contadorOperando1;
     int contadorOperando2;
     int dividiendo;
+    float ingreso1;
+    float ingreso2;
+    float sumando;
+    float restando;
+    float multiplicando;
+    float resolucionSuma;
+    float resolucionResta;
     float resolucionDivision;
+    float resolucionFactorial;
+    float resolucionFactorial2;
+    float resolucionMultiplicacion;
 
     flag1 = 0;
     flag2 = 0;
@@ -43,11 +44,11 @@ int main()
         {
             if(contadorOperando2 == 0)
             {
-                printf("*** Menu de Opciones ***\n\n1. Ingresar 1er operando (A=%d)\n2. Ingresar 2do operando (B=y)\n3. Calcular todas las operaciones\n4. Informar resultados\n5. Salir\n\n", ingreso1);
+                printf("*** Menu de Opciones ***\n\n1. Ingresar 1er operando (A=%.2f)\n2. Ingresar 2do operando (B=y)\n3. Calcular todas las operaciones\n4. Informar resultados\n5. Salir\n\n", ingreso1);
             }
             else
             {
-                printf("*** Menu de Opciones ***\n\n1. Ingresar 1er operando (A=%d)\n2. Ingresar 2do operando (B=%d)\n3. Calcular todas las operaciones\n4. Informar resultados\n5. Salir\n\n", ingreso1, ingreso2);
+                printf("*** Menu de Opciones ***\n\n1. Ingresar 1er operando (A=%.2f)\n2. Ingresar 2do operando (B=%.2f)\n3. Calcular todas las operaciones\n4. Informar resultados\n5. Salir\n\n", ingreso1, ingreso2);
             }
         }
 
@@ -61,7 +62,7 @@ int main()
                 contadorOperando1++;
                 printf("\nIngrese el primer operando\n");
                 fflush(stdin);
-                scanf("%d", &ingreso1);
+                scanf("%f", &ingreso1);
                 flag1 = 1;
                 break;
             case 2:
@@ -69,7 +70,7 @@ int main()
                 {
                     printf("\nIngrese el segundo operando\n");
                     fflush(stdin);
-                    scanf("%d", &ingreso2);
+                    scanf("%f", &ingreso2);
                     flag2 = 1;
                     flag1 = 0;
                     contadorOperando2++;
@@ -99,8 +100,9 @@ int main()
             case 4:
                 if(flag3 == 1)
                 {
-                    printf("\nEl resultado de A+B es: %d\n", sumando);
-                    printf("\nEl resultado de A-B es: %d\n", restando);
+                    printf("\nEl resultado de A+B es: %.2f\n", sumando);
+                    printf("\nEl resultado de A-B es: %.2f\n", restando);
+
                     if(dividiendo == 0)
                     {
                         printf("\nEl resultado de A/B es: %.2f\n", resolucionDivision);
@@ -110,21 +112,22 @@ int main()
                         printf("\nNo es posible dividir por cero.\n");
                     }
 
-                    printf("\nEl resultado de A*B es: %d\n", multiplicando);
+                    printf("\nEl resultado de A*B es: %.2f\n", multiplicando);
 
                     if(factorizando == 0)
                     {
-                        printf("\nEl factorial de A es: %d\n", resolucionFactorial);
+                        printf("\nEl factorial de A es: %.2f\n", resolucionFactorial);
                     }
                     else
                     {
                         printf("\nEl numero A no se puede factorizar, debe ingresar un numero mayor a 0.\n");
                     }
 
-                    if(ingreso2 > 0)
+                    factorizando2 = factorial(&resolucionFactorial2, ingreso2);
+
+                    if(factorizando2 == 0)
                     {
-                        factorizando = factorial(&resolucionFactorial2, ingreso2);
-                        printf("El factorial de B es: %d\n\n", resolucionFactorial2);
+                        printf("El factorial de B es: %.2f\n\n", resolucionFactorial2);
                     }
                     else
                     {

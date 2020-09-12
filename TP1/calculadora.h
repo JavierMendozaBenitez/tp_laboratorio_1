@@ -19,41 +19,41 @@ int utn_getNumero(int* pResultado,char* mensaje,char* mensajeError,int minimo,in
 
 /** \brief Devuelve la suma de los parametros.
  *
- * \param operando1 int Primer operando.
- * \param operando2 int Segundo operando.
- * \return int Devuelve el resultado de la suma.
+ * \param operando1 float Primer operando.
+ * \param operando2 float Segundo operando.
+ * \return float Devuelve el resultado de la suma.
  *
  */
 
-int suma(int operando1, int operando2);
+float suma(float operando1, float operando2);
 
 /** \brief Devuelve la resta de los parametros.
  *
- * \param operando1 int Primer operando.
- * \param operando2 int Segundo operando.
- * \return int Devuelve el resultado de la resta.
+ * \param operando1 float Primer operando.
+ * \param operando2 float Segundo operando.
+ * \return float Devuelve el resultado de la resta.
  *
  */
-int resta(int operando1, int operando2);
+float resta(float operando1, float operando2);
 
 /** \brief Devuelve la division de los parametros.
  *
  * \param pResultadoDivision float* Es el resultado de la division.
- * \param operando1 int Es el operando 1.
- * \param operando2 int Es el operando 2.
+ * \param operando1 float Es el operando 1.
+ * \param operando2 float Es el operando 2.
  * \return int Devuelve 0 si la operacion se hizo.
  *
  */
-int division(float* pResultadoDivision, int operando1, int operando2);
+int division(float* pResultadoDivision, float operando1, float operando2);
 
 /** \brief Devuelve la multiplicacion de los parametros.
  *
- * \param operando1 int Es el operando 1.
- * \param operando2 int Es el operando 2.
- * \return int Devuelve el resultado de la multiplicacion.
+ * \param operando1 float Es el operando 1.
+ * \param operando2 float Es el operando 2.
+ * \return float Devuelve el resultado de la multiplicacion.
  *
  */
-int multiplicacion(int operando1, int operando2);
+float multiplicacion(float operando1, float operando2);
 
 
 /** \brief Devuelve el factorial.
@@ -63,4 +63,4 @@ int multiplicacion(int operando1, int operando2);
  * \return int Devuelve 0 si se hizo correctamente.
  *
  */
-int factorial (int* pFact, int operando1);
+int factorial (float* pFact, float operando1);

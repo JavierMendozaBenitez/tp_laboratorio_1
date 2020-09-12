@@ -31,25 +31,25 @@ int utn_getNumero(int* pResultado,char* mensaje,char* mensajeError,int minimo,in
     return retorno;
 }
 
-int suma(int operando1, int operando2)
+float suma(float operando1, float operando2)
 {
-    int resultadoSuma;
+    float resultadoSuma;
 
     resultadoSuma = operando1 + operando2;
 
     return resultadoSuma;
 }
 
-int resta(int operando1, int operando2)
+float resta(float operando1, float operando2)
 {
-    int resultadoResta;
+    float resultadoResta;
 
     resultadoResta = operando1 - operando2;
 
     return resultadoResta;
 }
 
-int division(float* pResultadoDivision, int operando1, int operando2)
+int division(float* pResultadoDivision, float operando1, float operando2)
 {
     int retorno = -1;
     float resultadoDivision;
@@ -64,21 +64,23 @@ int division(float* pResultadoDivision, int operando1, int operando2)
     return retorno;
 }
 
-int multiplicacion(int operando1, int operando2)
+float multiplicacion(float operando1, float operando2)
 {
-    int resultadoMultiplicacion;
+    float resultadoMultiplicacion;
 
     resultadoMultiplicacion = operando1 * operando2;
 
     return resultadoMultiplicacion;
 }
 
-int factorial (int* pFact, int operando1)
+int factorial (float* pFact, float operando1)
 {
-    int fact = 1;
+    float fact = 1;
     int retorno = -1;
+    int ent;
+    ent = operando1;
 
-    if(pFact != NULL && operando1 >= 0)
+    if(pFact != NULL && operando1 > 0 && operando1 - ent == 0)
     {
         for ( int i = 1; i <= operando1; i++)
         {

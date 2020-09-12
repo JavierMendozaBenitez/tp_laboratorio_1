@@ -114,13 +114,23 @@ int main()
 
                     if(factorizando == 0)
                     {
-                        factorizando = factorial(&resolucionFactorial2, ingreso2);
-                        printf("\nEl factorial de A es: %d y El factorial de B es: %d\n\n", resolucionFactorial, resolucionFactorial2);
+                        printf("\nEl factorial de A es: %d\n", resolucionFactorial);
                     }
                     else
                     {
-                        printf("\nDebe ingresar un numero mayor a 0 para factorizar.\n\n");
+                        printf("\nEl numero A no se puede factorizar, debe ingresar un numero mayor a 0.\n");
                     }
+
+                    if(ingreso2 > 0)
+                    {
+                        factorizando = factorial(&resolucionFactorial2, ingreso2);
+                        printf("El factorial de B es: %d\n\n", resolucionFactorial2);
+                    }
+                    else
+                    {
+                        printf("El numero B no se puede factorizar, debe ingresar un numero mayor a 0.\n\n");
+                    }
+
                     contadorOperando1 = 0;
                     contadorOperando2 = 0;
                     flag3 = 0;
@@ -145,3 +155,4 @@ int main()
 
     return 0;
 }
+

@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1601933080 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_2\tp2\tp2\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"ArrayEmployees.h"
+
+1601932551 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_2\tp2\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"ArrayEmployees.h"
+
+1601934186 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_2\tp2\tp2\arrayemployees.h
+
+1601932551 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_2\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"ArrayEmployees.h"
+
+1601934186 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_2\tp2\arrayemployees.h
+

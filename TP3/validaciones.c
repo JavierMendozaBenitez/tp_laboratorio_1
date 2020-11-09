@@ -279,3 +279,21 @@ int menuInt()
 
     return opcion;
 }
+
+int subMenuInt()
+{
+    int opcion;
+    system("cls");
+
+    printf("*** Orden ***\n\n");
+    printf("1. Id.\n");
+    printf("2. Nombre.\n");
+    printf("3. Horas Trabajadas\n");
+    printf("4. Sueldos\n");
+    printf("5. Salir\n\n");
+    printf("Ingrese opcion: ");
+    fflush(stdin);
+    scanf("%d", &opcion);
+
+    return opcion;
+}

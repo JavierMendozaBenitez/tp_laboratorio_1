@@ -26,6 +26,7 @@ int main()
 
     char seguir = 's';
     char confirma;
+    int flagDestruir = 0;
 
     LinkedList* listaEmpleados = ll_newLinkedList();
 
@@ -78,7 +79,7 @@ int main()
             }
             break;
         case 7:
-            if(controller_sortEmployee(listaEmpleados, employeeSortByName) == 0)
+            if(controller_sortEmployee(listaEmpleados) == 0)
             {
                 printf("Empleados ordenados con exito\n\n");
             }
@@ -105,6 +106,7 @@ int main()
             break;
         case 10:
             ll_deleteLinkedList(listaEmpleados);
+            printf("LinkedList borrado, si quiere continuar debe presionar la opcion del menu 1.\n");
             break;
         case 11:
             printf("Confirma salida? Presione s para si o n para no: ");

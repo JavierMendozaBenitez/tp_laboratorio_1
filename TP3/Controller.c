@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "LinkedList.h"
 #include "Employee.h"
 #include "parser.h"
@@ -271,17 +272,62 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_sortEmployee(LinkedList* pArrayListEmployee,int* operacion(void*, void*))
+int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
+    int retorno = 1;
+    int opcion;
+    char seguir = 's';
+    char confirma;
 
-    int retorno=0;
-
-    if(pArrayListEmployee != NULL)
+    do
     {
-        ll_sort(pArrayListEmployee, operacion, 1);
-        mostrarEmpleados(pArrayListEmployee);
+        switch(subMenuInt())
+        {
+        case 1:
+            printf("En que orden? 1 ascendente o 2 descendente.\n");
+            fflush(stdin);
+            scanf("%d", &opcion);
+            ll_sort(pArrayListEmployee, employeeSortById, opcion);
+            mostrarEmpleados(pArrayListEmployee);
+            break;
+        case 2:
+            printf("En que orden? 1 ascendente o 2 descendente.\n");
+            fflush(stdin);
+            scanf("%d", &opcion);
+            ll_sort(pArrayListEmployee, employeeSortByName, opcion);
+            mostrarEmpleados(pArrayListEmployee);
+        case 3:
+            printf("En que orden? 1 ascendente o 2 descendente.\n");
+            fflush(stdin);
+            scanf("%d", &opcion);
+            ll_sort(pArrayListEmployee, employeeSortByWorkHours, opcion);
+            mostrarEmpleados(pArrayListEmployee);
+            break;
+        case 4:
+            printf("En que orden? 1 ascendente o 2 descendente.\n");
+            fflush(stdin);
+            scanf("%d", &opcion);
+            ll_sort(pArrayListEmployee, employeeSortBySalary, opcion);
+            mostrarEmpleados(pArrayListEmployee);
+            break;
+        case 5:
+            printf("Volver al menu principal? Presione s para si o n para no: ");
+            fflush(stdin);
+            fflush(stdin);
+            scanf("%c", &confirma);
+            confirma = tolower(confirma);
+            if(confirma == 's')
+            {
+                seguir = 'n';
+            }
+            break;
+        default:
+            printf("Opcion invalida!!!\n");
+        }
+        system("pause");
         retorno = 0;
     }
+    while(seguir == 's');
 
     return retorno;
 }

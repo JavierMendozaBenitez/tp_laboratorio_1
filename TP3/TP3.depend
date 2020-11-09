@@ -199,3 +199,52 @@
 
 1604529472 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\parser.h
 
+1604883133 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"validaciones.h"
+
+1604879344 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\linkedlist.h
+
+1604881330 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\employee.h
+	"LinkedList.h"
+
+1604879344 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\parser.h
+
+1604882757 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\validaciones.h
+
+1604881771 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1604883804 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"validaciones.h"
+
+1604881623 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\controller.h
+
+1604879344 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1604882227 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+

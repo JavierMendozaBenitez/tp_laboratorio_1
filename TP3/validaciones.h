@@ -90,3 +90,10 @@ char menuChar();
  *
  */
 int menuInt();
+
+/** \brief Sub menu de opciones int
+ *
+ * \return int devuelve el valor ingresado
+ *
+ */
+int subMenuInt();

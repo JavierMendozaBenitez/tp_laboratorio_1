@@ -142,14 +142,20 @@ int employee_getSueldo(Employee* this,int* sueldo)
 int employeeSortByName(void* empleadoA, void* empleadoB)
 {
     int retorno = 0;
-    char nombreA[128];
-    char nombreB[128];
+    Employee* empA = (Employee*) empleadoA;
+    Employee* empB = (Employee*) empleadoB;
 
-        if((employee_getNombre((Employee*)empleadoA, nombreA)) &&
-           (employee_getNombre((Employee*)empleadoB, nombreB)))
+    if(strcmp(empA->nombre, empB->nombre) > 0)
+    {
+        retorno = 1;
+    }
+    else
+    {
+        if(strcmp(empA->nombre, empB->nombre) < 0)
         {
-            retorno = strcmp(nombreA, nombreB);
+            retorno = -1;
         }
+    }
 
     return retorno;
 }
@@ -157,13 +163,19 @@ int employeeSortByName(void* empleadoA, void* empleadoB)
 int employeeSortById(void* empleadoA, void* empleadoB)
 {
     int retorno = 0;
-    int idA;
-    int idB;
+    Employee* empA = (Employee*) empleadoA;
+    Employee* empB = (Employee*) empleadoB;
 
-    if((employee_getId((Employee*)empleadoA, &idA)) &&
-       (employee_getId((Employee*)empleadoB, &idB)))
+    if(empA->id > empB->id)
     {
-        retorno = idA - idB;
+        retorno = 1;
+    }
+    else
+    {
+        if(empA->id < empB->id)
+        {
+            retorno = -1;
+        }
     }
 
     return retorno;
@@ -172,13 +184,19 @@ int employeeSortById(void* empleadoA, void* empleadoB)
 int employeeSortByWorkHours(void* empleadoA, void* empleadoB)
 {
     int retorno = 0;
-    int horasA;
-    int horasB;
+    Employee* empA = (Employee*) empleadoA;
+    Employee* empB = (Employee*) empleadoB;
 
-    if((employee_getHorasTrabajadas((Employee*)empleadoA, &horasA)) &&
-       (employee_getHorasTrabajadas((Employee*)empleadoB, &horasB)))
+    if(empA->horasTrabajadas > empB->horasTrabajadas)
     {
-        retorno = horasA - horasB;
+        retorno = 1;
+    }
+    else
+    {
+        if(empA->horasTrabajadas < empB->horasTrabajadas)
+        {
+            retorno = -1;
+        }
     }
 
     return retorno;
@@ -187,13 +205,19 @@ int employeeSortByWorkHours(void* empleadoA, void* empleadoB)
 int employeeSortBySalary(void* empleadoA, void* empleadoB)
 {
     int retorno = 0;
-    int sueldoA;
-    int sueldoB;
+    Employee* empA = (Employee*) empleadoA;
+    Employee* empB = (Employee*) empleadoB;
 
-    if((employee_getSueldo((Employee*)empleadoA, &sueldoA)) &&
-       (employee_getSueldo((Employee*)empleadoB, &sueldoB)))
+    if(empA->sueldo > empB->sueldo)
     {
-        retorno = sueldoA - sueldoB;
+        retorno = 1;
+    }
+    else
+    {
+        if(empA->sueldo < empB->sueldo)
+        {
+            retorno = -1;
+        }
     }
 
     return retorno;

@@ -26,7 +26,8 @@ int main()
 
     char seguir = 's';
     char confirma;
-    int flagDestruir = 0;
+    int flagLoadFromText = 0;
+    int flagLoadFromBinary = 0;
 
     LinkedList* listaEmpleados = ll_newLinkedList();
 
@@ -35,78 +36,153 @@ int main()
         switch(menuInt())
         {
         case 1:
-            if(controller_loadFromText("data.csv", listaEmpleados) != 0)
+            if(flagLoadFromBinary == 0)
             {
-                printf("Problema para cargar los empleados\n");
+                if(controller_loadFromText("data.csv", listaEmpleados) != 0)
+                {
+                    printf("Problema para cargar los empleados\n");
+                }
+                else
+                {
+                    printf("Empleados cargados correctamente\n");
+                    flagLoadFromText = 1;
+                }
             }
             else
             {
-                printf("Empleados cargados correctamente\n");
+                printf("Ya cargo el listado como binario, solo se puede cargar en Texto o Binario, si se cargan ambos se duplican.\n");
             }
             break;
         case 2:
-            if(controller_loadFromBinary("data.bin", listaEmpleados) != 0)
+            if(flagLoadFromText == 0)
             {
-                printf("Problema para cargar los empleados\n");
+                if(controller_loadFromBinary("data.bin", listaEmpleados) != 0)
+                {
+                    printf("Problema para cargar los empleados\n");
+                }
+                else
+                {
+                    printf("Empleados cargados correctamente\n");
+                    mostrarEmpleados(listaEmpleados);
+                    flagLoadFromBinary = 1;
+                }
             }
             else
             {
-                printf("Empleados cargados correctamente\n");
+                printf("Ya cargo el listado como texto, solo se puede cargar en Texto o Binario, si se cargan ambos se duplican.\n");
             }
             break;
         case 3:
-            if(controller_addEmployee(listaEmpleados) == 0)
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
             {
-                printf("Empleado agregado con exito\n\n");
+                if(controller_addEmployee(listaEmpleados) == 0)
+                {
+                    printf("Empleado agregado con exito\n\n");
+                }
+            }
+            else
+            {
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
             }
             break;
         case 4:
-            if(controller_editEmployee(listaEmpleados) == 0)
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
             {
-                printf("Empleado modificado con exito\n\n");
+                if(controller_editEmployee(listaEmpleados) == 0)
+                {
+                    printf("Empleado modificado con exito\n\n");
+                }
+            }
+            else
+            {
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
             }
             break;
         case 5:
-            if(controller_removeEmployee(listaEmpleados) == 0)
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
             {
-                printf("Empleado quitado con exito\n\n");
+                if(controller_removeEmployee(listaEmpleados) == 0)
+                {
+                    printf("Empleado quitado con exito\n\n");
+                }
+            }
+            else
+            {
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
             }
             break;
         case 6:
-            if(controller_ListEmployee(listaEmpleados) == 0)
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
             {
-                printf("Empleados listados con exito\n\n");
+                if(controller_ListEmployee(listaEmpleados) == 0)
+                {
+                    printf("Empleados listados con exito\n\n");
+                }
+            }
+            else
+            {
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
             }
             break;
         case 7:
-            if(controller_sortEmployee(listaEmpleados) == 0)
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
             {
-                printf("Empleados ordenados con exito\n\n");
+                if(controller_sortEmployee(listaEmpleados) == 0)
+                {
+                    printf("Empleados ordenados con exito\n\n");
+                }
+            }
+            else
+            {
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
             }
             break;
         case 8:
-            if(controller_saveAsText("data.csv", listaEmpleados) == 0)
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
             {
-                printf("Listas en texto realizadas con exito\n\n");
+                if(controller_saveAsText("data.csv", listaEmpleados) == 0)
+                {
+                    printf("Listas en texto realizadas con exito\n\n");
+                }
+                else
+                {
+                    printf("Problema para guardar los empleados\n");
+                }
             }
             else
             {
-                printf("Problema para guardar los empleados\n");
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
             }
             break;
         case 9:
-            if(controller_saveAsBinary("data.bin", listaEmpleados) == 0)
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
             {
-                printf("Listas en binario realizadas con exito\n\n");
+                if(controller_saveAsBinary("data.bin", listaEmpleados) == 0)
+                {
+                    printf("Listas en binario realizadas con exito\n\n");
+                }
+                else
+                {
+                    printf("Problema para guardar los empleados\n");
+                }
             }
             else
             {
-                printf("Problema para guardar los empleados\n");
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
             }
             break;
         case 10:
-            ll_deleteLinkedList(listaEmpleados);
-            printf("LinkedList borrado, si quiere continuar debe presionar la opcion del menu 1.\n");
+            if(flagLoadFromText == 1 || flagLoadFromBinary == 1)
+            {
+                ll_deleteLinkedList(listaEmpleados);
+                printf("LinkedList borrado, si quiere continuar debe presionar la opcion del menu 1 o 2.\n");
+                flagLoadFromText = 0;
+                flagLoadFromBinary = 0;
+            }
+            else
+            {
+                printf("Primero debe seleccionar la opcion 1 o 2.\n");
+            }
             break;
         case 11:
             printf("Confirma salida? Presione s para si o n para no: ");

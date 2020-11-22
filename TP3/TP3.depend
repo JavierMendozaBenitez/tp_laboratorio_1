@@ -53,124 +53,181 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1541216644 source:c:\users\chris\desktop\tp3\win_64\controller.c
+1559571681 source:c:\users\alumno\desktop\tp3\tp3\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559571681 c:\users\alumno\desktop\tp3\tp3\win_64\linkedlist.h
+
+1559571681 c:\users\alumno\desktop\tp3\tp3\win_64\employee.h
+
+1559571681 source:c:\users\alumno\desktop\tp3\tp3\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1559571681 c:\users\alumno\desktop\tp3\tp3\win_64\controller.h
+
+1559571681 source:c:\users\alumno\desktop\tp3\tp3\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1560363786 source:d:\escritorio\tp_laboratorio_1\tp3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
-	"ctype.h"
+	"inputs.h"
 
-1533133022 c:\users\chris\desktop\tp3\win_64\linkedlist.h
+1560362913 d:\escritorio\tp_laboratorio_1\tp3\linkedlist.h
 
-1541184324 c:\users\chris\desktop\tp3\win_64\employee.h
-	<stdlib.h>
+1560362913 d:\escritorio\tp_laboratorio_1\tp3\employee.h
 
-1541184341 source:c:\users\chris\desktop\tp3\win_64\employee.c
-	<stdio.h>
-	"Employee.h"
-	<string.h>
-
-1541216714 source:c:\users\chris\desktop\tp3\win_64\main.c
+1560364826 source:d:\escritorio\tp_laboratorio_1\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Controller.h"
 	"Employee.h"
 
-1533133022 c:\users\chris\desktop\tp3\win_64\controller.h
+1560362913 d:\escritorio\tp_laboratorio_1\tp3\controller.h
 
-1541182920 source:c:\users\chris\desktop\tp3\win_64\parser.c
+1560364700 source:d:\escritorio\tp_laboratorio_1\tp3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1533133022 c:\users\chris\desktop\tp3\win_64\parser.h
-
-1541108276 source:c:\users\chris_000\desktop\tp3\win_64\employee.c
-	<stdio.h>
+1560362913 source:d:\escritorio\tp_laboratorio_1\tp3\employee.c
+	<stdlib.h>
 	"Employee.h"
 	<string.h>
 
-1541108226 c:\users\chris_000\desktop\tp3\win_64\employee.h
+1560339372 source:c:\users\alumno\desktop\tp_laboratorio_1\tp3\employee.c
 	<stdlib.h>
+	"Employee.h"
+	<string.h>
 
-1541108692 source:c:\users\chris_000\desktop\tp3\win_64\main.c
+1560339372 c:\users\alumno\desktop\tp_laboratorio_1\tp3\employee.h
+
+1560339372 source:c:\users\alumno\desktop\tp_laboratorio_1\tp3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1560339372 c:\users\alumno\desktop\tp_laboratorio_1\tp3\linkedlist.h
+
+1560352015 source:c:\users\alumno\desktop\tp_laboratorio_1\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Controller.h"
 	"Employee.h"
 
-1533133022 c:\users\chris_000\desktop\tp3\win_64\linkedlist.h
+1560339372 c:\users\alumno\desktop\tp_laboratorio_1\tp3\controller.h
 
-1533133022 c:\users\chris_000\desktop\tp3\win_64\controller.h
-
-1541107071 source:c:\users\chris_000\desktop\tp3\win_64\parser.c
+1560339372 source:c:\users\alumno\desktop\tp_laboratorio_1\tp3\controller.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"LinkedList.h"
 	"Employee.h"
+	"parser.h"
+	"inputs.h"
 
-1541108615 source:c:\users\chris_000\desktop\tp3\win_64\controller.c
+1560362913 d:\escritorio\tp_laboratorio_1\tp3\parser.h
+
+1560363586 source:d:\escritorio\tp_laboratorio_1\tp3\inputs.c
 	<stdio.h>
 	<stdlib.h>
+	<time.h>
+	<string.h>
+	"inputs.h"
+
+1560362913 d:\escritorio\tp_laboratorio_1\tp3\inputs.h
+
+1560339372 c:\users\alumno\desktop\tp_laboratorio_1\tp3\parser.h
+
+1560339372 c:\users\alumno\desktop\tp_laboratorio_1\tp3\inputs.h
+
+1560351633 source:c:\users\alumno\desktop\tp_laboratorio_1\tp3\inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"inputs.h"
+
+1590720144 source:d:\usuario no tocar\desktop\tp3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
 
-1533133022 c:\users\chris_000\desktop\tp3\win_64\parser.h
+1590765792 d:\usuario no tocar\desktop\tp3\linkedlist.h
 
-1591615323 source:c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\controller.c
+1590766018 d:\usuario no tocar\desktop\tp3\employee.h
+
+1561499216 d:\usuario no tocar\desktop\tp3\parser.h
+
+1561499216 d:\usuario no tocar\desktop\tp3\inputs.h
+
+1590765990 source:d:\usuario no tocar\desktop\tp3\employee.c
+	<stdlib.h>
+	"Employee.h"
+	<string.h>
+
+1561499216 source:d:\usuario no tocar\desktop\tp3\inputs.c
 	<stdio.h>
 	<stdlib.h>
-	"LinkedList.h"
-	"Employee.h"
+	<time.h>
+	<string.h>
+	"inputs.h"
 
-1533133022 c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\linkedlist.h
-
-1591615272 c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\employee.h
-
-1533133022 c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\parser.h
-
-1591615369 source:c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\employee.c
-
-1591615261 source:c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\main.c
+1590719838 source:d:\usuario no tocar\desktop\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Controller.h"
 	"Employee.h"
 
-1533133022 c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\controller.h
+1561499216 d:\usuario no tocar\desktop\tp3\controller.h
 
-1591615429 source:c:\users\chris_000\desktop\tp3terminado (1)\tp3terminado\win_64\parser.c
+1590720144 source:d:\usuario no tocar\desktop\tp3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1604878131 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\controller.c
+1606029587 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\controller.c
 	<stdio.h>
 	<stdlib.h>
+	<ctype.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
 	"validaciones.h"
 
-1604529470 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\linkedlist.h
+1605456150 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\linkedlist.h
 
-1604877619 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\employee.h
+1606026589 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\employee.h
 	"LinkedList.h"
 
-1604877652 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\employee.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"Employee.h"
+1605456152 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\parser.h
 
-1604878376 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\main.c
+1604882757 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\validaciones.h
+
+1606021556 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -180,26 +237,29 @@
 	"Employee.h"
 	"validaciones.h"
 
-1604876857 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\controller.h
+1605456148 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\controller.h
 
-1604876857 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\parser.c
+1606021667 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
 
-1604878331 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\validaciones.c
+1604882227 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\validaciones.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 
-1602479099 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\validaciones.h
+1606026589 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tp3 rehecho\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+	"validaciones.h"
 
-1604529472 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\win_64\parser.h
-
-1604883133 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\controller.c
+1606029587 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\controller.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -208,22 +268,23 @@
 	"parser.h"
 	"validaciones.h"
 
-1604879344 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\linkedlist.h
+1605456150 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\linkedlist.h
 
-1604881330 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\employee.h
+1606026589 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\employee.h
 	"LinkedList.h"
 
-1604879344 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\parser.h
+1605456152 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\parser.h
 
-1604882757 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\validaciones.h
+1604882757 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\validaciones.h
 
-1604881771 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\employee.c
+1606026589 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Employee.h"
+	"validaciones.h"
 
-1604883804 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\main.c
+1606021556 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -233,16 +294,16 @@
 	"Employee.h"
 	"validaciones.h"
 
-1604881623 c:\users\javier\downloads\tp_laboratorio_1-master\tp3\controller.h
+1605456148 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\controller.h
 
-1604879344 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\parser.c
+1606021667 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
 
-1604882227 source:c:\users\javier\downloads\tp_laboratorio_1-master\tp3\validaciones.c
+1604882227 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp3\validaciones.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

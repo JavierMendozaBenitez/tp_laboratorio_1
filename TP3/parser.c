@@ -29,7 +29,7 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
         {
             auxEmpleado = employee_newParametros(buffer[0], buffer[1], buffer[2], buffer[3]);
             ll_add(pArrayListEmployee, auxEmpleado);
-            printf("%d %s %d %d\n", auxEmpleado->id, auxEmpleado->nombre, auxEmpleado->horasTrabajadas, auxEmpleado->sueldo);
+            printf("%d,%s,%d,%d\n", auxEmpleado->id, auxEmpleado->nombre, auxEmpleado->horasTrabajadas, auxEmpleado->sueldo);
             error = 0;
         }
         else
@@ -37,6 +37,9 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
             break;
         }
     }
+    int len = ll_len(pArrayListEmployee);
+    printf("Cantidad de elementos: %d\n", len);
+    system("pause");
 
     return error;
 }
@@ -52,16 +55,40 @@ int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 {
     Employee* auxEmpleado;
     int error = -1;
+    int cant;
+
+    auxEmpleado = employee_new();
 
     if(pFile != NULL)
     {
         while(!feof(pFile))
         {
-            fread(&auxEmpleado, sizeof(Employee*), 1, pFile);
-            ll_add(pArrayListEmployee, auxEmpleado);
-            error = 0;
+            cant = fread(auxEmpleado, sizeof(Employee),1, pFile);
+
+            if(cant!=1)
+            {
+                if(feof(pFile))
+                {
+                    break;
+                }
+                else
+                {
+                    printf("No leyo el ultimo registro\n");
+                    break;
+                }
+            }
+            else
+            {
+                ll_add(pArrayListEmployee, auxEmpleado);
+                auxEmpleado = employee_new();
+                error = 0;
+            }
         }
     }
+
+    int len = ll_len(pArrayListEmployee);
+    printf("Cantidad de elementos: %d\n", len);
+    system("pause");
 
     return error;
 }

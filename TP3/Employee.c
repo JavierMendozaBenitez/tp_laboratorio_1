@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Employee.h"
+#include "validaciones.h"
+
 
 Employee* employee_new()
 {
@@ -25,23 +27,28 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
 
     if(nuevoEmpleado != NULL)
     {
-        nuevoEmpleado->id = atoi(idStr);
-        strcpy(nuevoEmpleado->nombre, nombreStr);
-        nuevoEmpleado->horasTrabajadas = atoi(horasTrabajadasStr);
-        nuevoEmpleado->sueldo = atoi(sueldo);
-
+        if(
+           employee_setId(nuevoEmpleado, idStr) ||
+           employee_setNombre(nuevoEmpleado, nombreStr) ||
+           employee_setHorasTrabajadas(nuevoEmpleado, horasTrabajadasStr) ||
+           employee_setSueldo(nuevoEmpleado, sueldo))
+           {
+               free(nuevoEmpleado);
+               nuevoEmpleado = NULL;
+               printf("Datos ingresados incorrectos, reintente.\n");
+           }
     }
 
     return nuevoEmpleado;
 }
 
-int employee_setId(Employee* this,int id)
+int employee_setId(Employee* this,char* id)
 {
     int error = 1;
 
     if(this != NULL && id >0)
     {
-        this->id = id;
+        this->id = atoi(id);
         error = 0;
     }
 
@@ -76,25 +83,25 @@ int employee_setNombre(Employee* this,char* nombre)
 
 int employee_getNombre(Employee* this,char* nombre)
 {
-    int todoOk = 0;
+    int todoOk = 1;
 
     if(this != NULL && nombre != NULL)
     {
-        strcpy(*nombre, this->nombre);
-        todoOk = 1;
+        strcpy(nombre, this->nombre);
+        todoOk = 0;
     }
 
     return todoOk;
 }
 
-int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
+int employee_setHorasTrabajadas(Employee* this,char* horasTrabajadas)
 {
-    int todoOk = 0;
+    int todoOk = 1;
 
     if(this != NULL && horasTrabajadas > 0)
     {
-        this->horasTrabajadas = horasTrabajadas;
-        todoOk = 1;
+        this->horasTrabajadas = atoi(horasTrabajadas);
+        todoOk = 0;
     }
 
     return todoOk;
@@ -102,25 +109,25 @@ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
 
 int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas)
 {
-    int todoOk = 0;
+    int todoOk = 1;
 
     if(this != NULL && horasTrabajadas != NULL)
     {
         *horasTrabajadas = this->horasTrabajadas;
-        todoOk = 1;
+        todoOk = 0;
     }
 
     return todoOk;
 }
 
-int employee_setSueldo(Employee* this,int sueldo)
+int employee_setSueldo(Employee* this,char* sueldo)
 {
-    int todoOk = 0;
+    int todoOk = 1;
 
     if(this != NULL && sueldo > 0)
     {
-        this->sueldo = sueldo;
-        todoOk = 1;
+        this->sueldo = atoi(sueldo);
+        todoOk = 0;
     }
 
     return todoOk;
@@ -128,12 +135,12 @@ int employee_setSueldo(Employee* this,int sueldo)
 
 int employee_getSueldo(Employee* this,int* sueldo)
 {
-    int todoOk = 0;
+    int todoOk = 1;
 
     if(this != NULL && sueldo != NULL)
     {
         *sueldo = this->sueldo;
-        todoOk = 1;
+        todoOk = 0;
     }
 
     return todoOk;
@@ -226,12 +233,24 @@ int employeeSortBySalary(void* empleadoA, void* empleadoB)
 int mostrarEmpleado(Employee* empleado)
 {
     int error = 1;
+    int id;
+    char nombre[128];
+    int horasTrabajadas;
+    int sueldo;
 
     if(empleado != NULL)
     {
-        printf("%d   %10s        %d         %d\n", empleado->id, empleado->nombre, empleado->horasTrabajadas, empleado->sueldo);
-        error = 0;
+        if((
+           (employee_getId(empleado, &id) == 0) &&
+           (employee_getNombre(empleado, nombre) == 0) &&
+           (employee_getHorasTrabajadas(empleado, &horasTrabajadas) == 0) &&
+           (employee_getSueldo(empleado, &sueldo) == 0)))
+        {
+            printf("%d   %10s              %d             %d\n", id, nombre, horasTrabajadas, sueldo);
+            error = 0;
+        }
     }
+
     return error;
 }
 
@@ -245,7 +264,7 @@ int mostrarEmpleados(LinkedList* lista)
     if(lista != NULL )
     {
         error = 0;
-        printf(" Id        Nombre      Sexo     Sueldo\n");
+        printf(" Id        Nombre      Horas Trabajadas     Sueldo\n");
         for(int i=0; i< tam; i++)
         {
             auxEmp = (Employee*)ll_get(lista, i);
@@ -259,6 +278,17 @@ int mostrarEmpleados(LinkedList* lista)
         {
             printf("No hay empleados para mostrar\n\n");
         }
+    }
+    return error;
+}
+
+int employee_delete(Employee* this)
+{
+    int error = 1;
+    if(this != NULL)
+    {
+        free(this);
+        error = 0;
     }
     return error;
 }

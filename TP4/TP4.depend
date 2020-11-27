@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1606367335 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp4 borrador\tp4 borrador\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1606275164 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp4 borrador\tp4 borrador\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1606283098 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp4 borrador\tp4 borrador\linkedlist.h
+
+1606277620 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp4 borrador\tp4 borrador\empleado.c
+
+1606277665 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp4 borrador\tp4 borrador\empleados.h
+
+1606328735 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp4 borrador\tp4 borrador\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1606026589 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp4 borrador\tp4 borrador\employee.h
+	"LinkedList.h"
+
+1606375653 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp4\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1606283098 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp4\linkedlist.h
+
+1606375203 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp4\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1606375203 c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp4\employee.h
+	"LinkedList.h"
+
+1606498919 source:c:\users\javier\documents\técnico universitario en programación\laboratorio y programación 1\test\tps\tp_laboratorio_1\tp4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+
